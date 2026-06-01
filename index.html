@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -51,6 +52,31 @@
             </div>
         </section>
 
+        <!-- 2. API -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="bg-blue-50 px-4 py-3 border-b border-slate-200">
+                <h2 class="text-base font-bold text-slate-800 text-center">2. API</h2>
+            </div>
+            <div class="p-4 flex flex-col gap-4">
+                <!-- 유튜브 API 입력 및 복사 -->
+                <div class="flex flex-col gap-2 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    <label for="youtube-api" class="font-bold text-slate-800 text-sm text-center">유투브 전용 API</label>
+                    <div class="flex gap-2 w-full">
+                        <input type="text" id="youtube-api" placeholder="여기에 API를 입력하세요" class="flex-1 px-3 py-2.5 bg-white border border-slate-300 rounded-lg text-sm text-slate-700 focus:outline-none focus:border-blue-500 shadow-sm text-center">
+                        <button onclick="copyInputVal('youtube-api', '유투브 전용 API가 복사되었습니다.')" class="px-5 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm flex justify-center items-center shrink-0">복사</button>
+                    </div>
+                </div>
+                <!-- 제미나이 API 입력 및 복사 -->
+                <div class="flex flex-col gap-2 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    <label for="gemini-api" class="font-bold text-slate-800 text-sm text-center">제미나이 API</label>
+                    <div class="flex gap-2 w-full">
+                        <input type="text" id="gemini-api" placeholder="여기에 API를 입력하세요" class="flex-1 px-3 py-2.5 bg-white border border-slate-300 rounded-lg text-sm text-slate-700 focus:outline-none focus:border-blue-500 shadow-sm text-center">
+                        <button onclick="copyInputVal('gemini-api', '제미나이 API가 복사되었습니다.')" class="px-5 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm flex justify-center items-center shrink-0">복사</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 3. Youtube 댓글 사이트 링크 -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
             <div class="bg-blue-50 px-4 py-3 border-b border-slate-200">
@@ -94,6 +120,17 @@
 
     <script>
         let toastTimeout;
+
+        // 입력창 값을 받아와 클립보드에 복사하는 전용 핸들러
+        function copyInputVal(inputId, successMessage) {
+            const input = document.getElementById(inputId);
+            const val = input.value.trim();
+            if (!val) {
+                showToast('API 키를 먼저 입력해 주세요.');
+                return;
+            }
+            copyToClipboard(val, successMessage);
+        }
 
         // 텍스트 클립보드 복사 함수
         function copyToClipboard(text, successMessage) {
@@ -142,3 +179,5 @@
     </script>
 </body>
 </html>
+
+```
