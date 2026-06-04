@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -22,30 +23,30 @@
         }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen">
+<body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen text-[110%]">
     
-    <div class="max-w-md mx-auto p-4 space-y-6 pb-24">
+    <div class="max-w-md mx-auto p-4 space-y-7 pb-26">
         
-        <header class="py-6 text-center">
-            <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Design Research & Insight with AI</h1>
+        <header class="py-7 text-center">
+            <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight md:text-3xl">Design Research & Insight with AI</h1>
         </header>
 
         <!-- 1. 프로그램 링크 -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <div class="bg-blue-50 px-4 py-3 border-b border-slate-200">
-                <h2 class="text-base font-bold text-slate-800 text-center">1. 프로그램 링크</h2>
+            <div class="bg-blue-50 px-4 py-3.5 border-b border-slate-200">
+                <h2 class="text-lg font-bold text-slate-800 text-center">1. 프로그램 링크</h2>
             </div>
-            <div class="p-4 flex flex-col gap-3">
-                <a href="https://kyuil71.github.io/youtube-collector/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-sm border border-slate-200">
+            <div class="p-4 flex flex-col gap-3.5">
+                <a href="https://kyuil71.github.io/youtube-collector/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-base border border-slate-200">
                     YOUTUBE voice collector
                 </a>
-                <a href="https://kyuil71.github.io/User-Voice-Data-Analyze/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-sm border border-slate-200">
+                <a href="https://kyuil71.github.io/User-Voice-Data-Analyze/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-base border border-slate-200">
                     User voice analysis
                 </a>
-                <a href="https://kyuil71.github.io/research_interview_insight/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-sm border border-slate-200">
-                    Design Research Interview & Insight
+                <a href="https://kyuil71.github.io/research_interview_insight/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-base border border-slate-200">
+                    Design Research Interview
                 </a>
-                <a href="https://kyuil71.github.io/storyboard/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-sm border border-slate-200">
+                <a href="https://kyuil71.github.io/storyboard/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-base border border-slate-200">
                     AI Storyboard Maker
                 </a>
             </div>
@@ -53,18 +54,18 @@
 
         <!-- 2. API -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <div class="bg-blue-50 px-4 py-3 border-b border-slate-200">
-                <h2 class="text-base font-bold text-slate-800 text-center">2. API 관리</h2>
+            <div class="bg-blue-50 px-4 py-3.5 border-b border-slate-200">
+                <h2 class="text-lg font-bold text-slate-800 text-center">2. API 관리</h2>
             </div>
             <div class="p-4 flex flex-col gap-4">
-                <div class="flex flex-col gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                    <label for="api-textarea" class="font-bold text-slate-800 text-sm text-center block">
-                        첫째 줄: 유튜브 API / 둘째 줄: 제미나이 API
+                <div class="flex flex-col gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <label for="api-textarea" class="font-bold text-slate-800 text-base text-center block">
+                        API를 입력하세요
                     </label>
-                    <textarea id="api-textarea" rows="2" placeholder="첫째 줄에 유튜브 API&#10;둘째 줄에 제미나이 API를 입력하세요" class="w-full px-3 py-2.5 bg-white border border-slate-300 rounded-lg text-sm text-slate-700 focus:outline-none focus:border-blue-500 shadow-sm text-center resize-none leading-relaxed"></textarea>
+                    <textarea id="api-textarea" rows="2" class="w-full px-3 py-2.5 bg-white border-2 border-slate-400 rounded-lg text-base text-slate-700 focus:outline-none focus:border-blue-500 shadow-sm text-center resize-none leading-relaxed"></textarea>
                     <div class="flex gap-2 w-full mt-1">
-                        <button onclick="copyLineFromInput(1, '유투브 전용 API가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-white border border-slate-300 text-slate-700 text-xs font-bold rounded-lg active:bg-slate-100 transition-colors shadow-sm">유투브 API 복사</button>
-                        <button onclick="copyLineFromInput(2, '제미나이 API가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-xs font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">제미나이 API 복사</button>
+                        <button onclick="copyLineFromInput(1, '유투브 전용 API가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-sm font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">유투브 API 복사</button>
+                        <button onclick="copyLineFromInput(2, '제미나이 API가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-sm font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">제미나이 API 복사</button>
                     </div>
                 </div>
             </div>
@@ -72,30 +73,36 @@
 
         <!-- 3. Youtube 댓글 사이트 링크 -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <div class="bg-blue-50 px-4 py-3 border-b border-slate-200">
-                <h2 class="text-base font-bold text-slate-800 text-center">3. Youtube 댓글 사이트 링크</h2>
+            <div class="bg-blue-50 px-4 py-3.5 border-b border-slate-200">
+                <h2 class="text-lg font-bold text-slate-800 text-center">3. Youtube 댓글 사이트 링크</h2>
             </div>
             <div class="p-4 flex flex-col gap-4">
                 
                 <!-- 무선사업부 -->
-                <div class="flex flex-col gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                    <div class="font-bold text-slate-800 text-sm text-center">무선사업부 _ 폴드7</div>
+                <div class="flex flex-col gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <div class="font-bold text-slate-800 text-base text-center">무선사업부 _ 폴드7</div>
                     <div class="flex gap-2 w-full">
-                        <a href="https://youtu.be/vOy6kqVCgCg" target="_blank" class="flex-1 flex justify-center items-center py-3 bg-white border border-slate-300 text-slate-700 text-sm font-bold rounded-lg active:bg-slate-100 transition-colors shadow-sm">주소 열기</a>
-                        <button onclick="copyToClipboard('https://youtu.be/vOy6kqVCgCg', 'Youtube 주소가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-sm font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">주소 복사</button>
+                        <a href="https://youtu.be/vOy6kqVCgCg" target="_blank" class="flex-1 flex justify-center items-center py-3 bg-white border border-slate-300 text-slate-700 text-base font-bold rounded-lg active:bg-slate-100 transition-colors shadow-sm">주소 열기</a>
+                        <button onclick="copyToClipboard('https://youtu.be/vOy6kqVCgCg', 'Youtube 주소가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-base font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">주소 복사</button>
                     </div>
                 </div>
 
                 <!-- 영상사업부 -->
-                <div class="flex flex-col gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200 opacity-60">
-                    <div class="font-bold text-slate-800 text-sm text-center">영상사업부 _ 예정</div>
-                    <div class="text-xs text-slate-500 bg-slate-200 py-3 rounded-lg text-center font-medium border border-slate-300">リンク 업데이트 예정</div>
+                <div class="flex flex-col gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <div class="font-bold text-slate-800 text-base text-center">영상사업부 _ TV S95D</div>
+                    <div class="flex gap-2 w-full">
+                        <a href="https://www.youtube.com/watch?v=Jvm2HO20P6Q" target="_blank" class="flex-1 flex justify-center items-center py-3 bg-white border border-slate-300 text-slate-700 text-base font-bold rounded-lg active:bg-slate-100 transition-colors shadow-sm">주소 열기</a>
+                        <button onclick="copyToClipboard('https://www.youtube.com/watch?v=Jvm2HO20P6Q', 'Youtube 주소가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-base font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">주소 복사</button>
+                    </div>
                 </div>
 
                 <!-- 생활가전사업부 -->
-                <div class="flex flex-col gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200 opacity-60">
-                    <div class="font-bold text-slate-800 text-sm text-center">생활가전사업부 _ 예정</div>
-                    <div class="text-xs text-slate-500 bg-slate-200 py-3 rounded-lg text-center font-medium border border-slate-300">링크 업데이트 예정</div>
+                <div class="flex flex-col gap-3.5 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <div class="font-bold text-slate-800 text-base text-center">생활가전사업부 _ 세탁건조기 WD53DBA900</div>
+                    <div class="flex gap-2 w-full">
+                        <a href="https://www.youtube.com/watch?v=vao_KqCzLUE" target="_blank" class="flex-1 flex justify-center items-center py-3 bg-white border border-slate-300 text-slate-700 text-base font-bold rounded-lg active:bg-slate-100 transition-colors shadow-sm">주소 열기</a>
+                        <button onclick="copyToClipboard('https://www.youtube.com/watch?v=vao_KqCzLUE', 'Youtube 주소가 복사되었습니다.')" class="flex-1 flex justify-center items-center py-3 bg-blue-600 text-white text-base font-bold rounded-lg active:bg-blue-700 transition-colors shadow-sm">주소 복사</button>
+                    </div>
                 </div>
 
             </div>
@@ -104,7 +111,7 @@
     </div>
 
     <!-- 토스트 메시지 컨테이너 -->
-    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3.5 rounded-full shadow-xl text-sm font-medium transition-all duration-300 pointer-events-none toast-exit flex items-center gap-2 z-50">
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-6 py-3.5 rounded-full shadow-xl text-base font-medium transition-all duration-300 pointer-events-none toast-exit flex items-center gap-2 z-50">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
         </svg>
@@ -119,7 +126,6 @@
             const textarea = document.getElementById('api-textarea');
             const lines = textarea.value.split('\n');
             
-            // 인덱스는 0부터 시작하므로 lineNumber - 1
             const targetLine = lines[lineNumber - 1] ? lines[lineNumber - 1].trim() : '';
             
             if (!targetLine) {
@@ -173,4 +179,5 @@
     </script>
 </body>
 </html>
-```eof
+
+```
