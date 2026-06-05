@@ -45,9 +45,6 @@
                 <a href="https://kyuil71.github.io/research_interview_insight/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-base border border-slate-200">
                     Design Research Interview
                 </a>
-                <a href="https://kyuil71.github.io/storyboard/" target="_blank" class="flex justify-center items-center w-full p-4 bg-slate-50 hover:bg-slate-100 active:bg-slate-200 text-blue-700 font-semibold rounded-xl transition-colors text-center text-base border border-slate-200">
-                    AI Storyboard Maker
-                </a>
             </div>
         </section>
 
@@ -129,11 +126,20 @@
 
     <script>
         let toastTimeout;
+        let inputAlertTimeout;
 
         // 마스킹 업데이트 함수 (줄바꿈 문자는 유지하고 모든 글자를 *로 교체)
         function updateMask(el) {
             const masked = document.getElementById('api-masked');
             masked.value = el.value.replace(/[^\n]/g, '*');
+
+            // API 입력 감지 시 확인 메시지 출력 (사용자가 입력을 멈춘 뒤 1초 후에 실행)
+            if (el.value.trim() !== "") {
+                clearTimeout(inputAlertTimeout);
+                inputAlertTimeout = setTimeout(() => {
+                    showToast("API가 입력되었습니다.");
+                }, 1000);
+            }
         }
 
         // 특정 줄의 텍스트를 추출하여 복사하는 함수
